@@ -1,3 +1,18 @@
+(function($){
+
+    // Pricing Range Slider
+    $( ".ur-pricing-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $("#amount").val("$" + $(".ur-pricing-range").slider("values", 0) + " - $" + $(".ur-pricing-range").slider("values", 1));
+})(jQuery)
+
 /*==================================
 * Sicky Headaer
 ==================================*/
@@ -910,21 +925,3 @@ document.querySelectorAll(".drecrement").forEach(button => {
         inputField.dispatchEvent(new Event('change'));
     });
 });
-
-
-
-(function($){
-
-    // Pricing Range Slider
-    $( ".ur-pricing-range" ).slider({
-        range: true,
-        min: 0,
-        max: 500,
-        values: [ 75, 300 ],
-        slide: function( event, ui ) {
-            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-        }
-    });
-    $("#amount").val("$" + $(".ur-pricing-range").slider("values", 0) + " - $" + $(".ur-pricing-range").slider("values", 1));
-})(jQuery)
-
