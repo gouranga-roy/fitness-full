@@ -284,10 +284,11 @@ svg {
       width: 24px;
       height: 24px;
       position: relative;
-      top: -1px;
-      -webkit-transition-delay: 0.36s;
-      -o-transition-delay: 0.36s;
-      transition-delay: 0.36s; }
+      top: -1px; }
+      .gm_primary-btn .gm_btn_text > svg path {
+        -webkit-transition-delay: 0.36s;
+        -o-transition-delay: 0.36s;
+        transition-delay: 0.36s; }
   .gm_primary-btn .gm_btnShape {
     display: inline-block;
     position: absolute;

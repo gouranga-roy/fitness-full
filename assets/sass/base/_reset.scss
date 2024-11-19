@@ -274,7 +274,9 @@ svg {
             height: 24px;
             position: relative;
             top: -1px;
-            transition-delay: 0.36s;
+            path {
+                transition-delay: 0.36s;
+            }
         }
     }
 
