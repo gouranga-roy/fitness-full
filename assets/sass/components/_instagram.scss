@@ -93,7 +93,7 @@
         line-height: 52px;
         font-weight: 600;
         text-transform: uppercase;
-        color: var(--color-white);
+        color: var(--white-color);
         margin: 0;
 
         @include screen-992 {
@@ -108,7 +108,7 @@
         line-height: 115px;
         font-weight: 600;
         text-transform: uppercase;
-        color: var(--color-white);
+        color: var(--white-color);
         margin: 0;
 
         @include large-screen {

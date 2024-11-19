@@ -22,7 +22,7 @@
         font-weight: 700;
         line-height: 25.2px;
         letter-spacing: 0.05em;
-        color: var(--color-white);
+        color: var(--white-color);
         text-transform: uppercase;
 
         @include large-screen {
@@ -38,7 +38,7 @@
         width: 48px;
         padding: 0;
         background: var(--primary-color);
-        color: var(--color-white);
+        color: var(--white-color);
 
         &:hover {
             background: var(--secondary-color);
@@ -49,7 +49,7 @@
         width: 48px;
         padding: 0;
         background: var(--primary-color);
-        color: var(--color-white);
+        color: var(--white-color);
 
         &:hover {
             background: var(--secondary-color);
@@ -165,11 +165,11 @@
             border-color: var(--secondary-color);
 
             svg {
-                fill: var(--color-white);
+                fill: var(--white-color);
 
                 path {
-                    stroke: var(--color-white);
-                    fill: var(--color-white);
+                    stroke: var(--white-color);
+                    fill: var(--white-color);
                     stroke-width: .2px;
                 }
             }
@@ -290,11 +290,11 @@
             border-color: var(--secondary-color);
 
             svg {
-                fill: var(--color-white);
+                fill: var(--white-color);
 
                 path {
-                    stroke: var(--color-white);
-                    fill: var(--color-white);
+                    stroke: var(--white-color);
+                    fill: var(--white-color);
                     stroke-width: .2px;
                 }
             }
@@ -402,14 +402,14 @@
                 background: var(--secondary-color);
 
                 & i {
-                    color: var(--color-white);
+                    color: var(--white-color);
                 }
 
                 & svg {
-                    fill: var(--color-white);
+                    fill: var(--white-color);
 
                     & path {
-                        fill: var(--color-white);
+                        fill: var(--white-color);
                     }
                 }
             }
@@ -511,16 +511,16 @@
 
         & i {
             font-size: 17px;
-            color: var(--color-white);
+            color: var(--white-color);
         }
 
         & svg {
-            fill: var(--color-white);
+            fill: var(--white-color);
 
             & path {
-                fill: var(--color-white);
+                fill: var(--white-color);
                 stroke-width: 0.2px;
-                stroke: var(--color-white);
+                stroke: var(--white-color);
             }
         }
 
@@ -548,7 +548,7 @@
     background: var(--color-background);
     @include displayFlex(flex, start, center, row);
     gap: 32px;
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--white-color);
     transition: var(--transition-base);
 
     @include screen-1200-to-1320 {
@@ -787,7 +787,7 @@
             background: var(--secondary-color);
 
             & li {
-                color: var(--color-white);
+                color: var(--white-color);
                 background: var(--secondary-color);
             }
 

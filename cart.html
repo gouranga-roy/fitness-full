@@ -18,7 +18,10 @@
 
     <!--Essential Js files-->
     
+    <script src="assets/js/jquery.min.js" defer="defer"></script>
+    <script src="assets/js/jquery-ui.js" defer="defer"></script>
     <script src="assets/js/bootstrap.min.js" defer="defer"></script>
+    <script src="assets/js/popper.min.js" defer="defer"></script>
     <script src="assets/js/swiper-bundle.min.js" defer="defer"></script>
     <script src="assets/js/shuffle.min.js" defer="defer"></script>
     <script src="assets/js/gsap.js" defer="defer"></script>
@@ -230,11 +233,11 @@
                             <div class="d-flex align-items-center gap-4 product-box">
                                 <button type="button" class="remove_product"><i class="fas fa-close"></i></button>
                                 <div class="feature-image light-bg">
-                                    <img src="assets/images/products/product-1.png" class="img-fluid" alt="product">
+                                    <img src="assets/images/products/product-sm01.jpg" class="img-fluid" alt="product">
                                 </div>
                                 <div>
-                                    <span class="fs-sm text-uppercase gmWsecondaryColor d-block">Rings</span>
-                                    <a href="#" class="product-title h6 mt-2 d-block">Dolda Sweet Gold Rings</a>
+                                    <span class="fs-sm text-uppercase gmWsecondaryColor d-block">Men’s Shorts</span>
+                                    <a href="product-details.html" class="product-title h6 mt-2 d-block">ADIDAS Real madrid Shorts</a>
                                 </div>
                             </div>
                         </td>
@@ -243,10 +246,10 @@
                         </td>
                         <td>
                             <div class="quantity d-flex align-items-center">
-                                <input type="text" value="1">
+                                <input type="text" value="1" class="carqty">
                                 <div class="step-btns">
                                     <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
-                                    <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                                    <button class="drecrement"><i class="fa-solid fa-angle-down"></i></button>
                                 </div>
                             </div>
                         </td>
@@ -259,11 +262,11 @@
                             <div class="d-flex align-items-center gap-4 product-box">
                                 <button type="button" class="remove_product"><i class="fas fa-close"></i></button>
                                 <div class="feature-image light-bg">
-                                    <img src="assets/images/products/product-2.png" class="img-fluid" alt="product">
+                                    <img src="assets/images/products/product-sm02.jpg" class="img-fluid" alt="product">
                                 </div>
                                 <div>
-                                    <span class="fs-sm text-uppercase gmWsecondaryColor d-block">Bracelates</span>
-                                    <a href="#" class="product-title h6 mt-2 d-block">Hkd 24k Bracelet</a>
+                                    <span class="fs-sm text-uppercase gmWsecondaryColor d-block">Men’s Shorts</span>
+                                    <a href="product-details.html" class="product-title h6 mt-2 d-block">Yoga Shorts and sports bra set</a>
                                 </div>
                             </div>
                         </td>
@@ -272,10 +275,10 @@
                         </td>
                         <td>
                             <div class="quantity d-flex align-items-center">
-                                <input type="text" value="1">
+                                <input type="text" value="1" class="carqty">
                                 <div class="step-btns">
                                     <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
-                                    <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                                    <button class="drecrement"><i class="fa-solid fa-angle-down"></i></button>
                                 </div>
                             </div>
                         </td>
@@ -290,7 +293,15 @@
                                     <input type="text" placeholder="Coupon Code" class="theme-input">
                                     <button type="submit" class="submit-btn">Apply Coupon</button>
                                 </form>
-                                <button type="button" class="template-btn primary-btn"><span>Update Cart</span></button>
+                                <button class="gm_primary-btn">
+                                    <span class="gm_btnShape"></span>
+                                    <span class="gm_btnShape"></span>
+                                    <span class="gm_btnShape"></span>
+                                    <span class="gm_btnShape"></span>
+                                    <span class="gm_btn_text">
+                                        Update Cart
+                                    </span>
+                                </button>
                             </div>
                         </td>
                     </tr>

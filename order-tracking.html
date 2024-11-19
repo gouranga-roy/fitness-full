@@ -18,7 +18,10 @@
 
     <!--Essential Js files-->
     
+    <script src="assets/js/jquery.min.js" defer="defer"></script>
+    <script src="assets/js/jquery-ui.js" defer="defer"></script>
     <script src="assets/js/bootstrap.min.js" defer="defer"></script>
+    <script src="assets/js/popper.min.js" defer="defer"></script>
     <script src="assets/js/swiper-bundle.min.js" defer="defer"></script>
     <script src="assets/js/shuffle.min.js" defer="defer"></script>
     <script src="assets/js/gsap.js" defer="defer"></script>
@@ -221,7 +224,15 @@
 
                 <label for="mail" class="mt-32">Enter Email Address</label>
                 <input type="email" placeholder="Email you used during checkout" class="theme-input" id="mail">
-                <button type="submit" class="template-btn primary-btn d-block w-100 text-uppercase fw-normal mt-40"><span>Track Order</span></button>
+                <button type="submit" class="gm_primary-btn w-100 text-uppercase fw-normal mt-40">
+                    <span class="gm_btnShape"></span>
+                    <span class="gm_btnShape"></span>
+                    <span class="gm_btnShape"></span>
+                    <span class="gm_btnShape"></span>
+                    <span class="gm_btn_text">
+                        Track Order
+                    </span>
+                </button>
             </form>
             <div class="help-box mt-40 d-flex align-items-center justify-content-between gap-3 flex-wrap">
                 <p class="gmWprimaryColor text-uppercase mb-0">Do you need help?</p>

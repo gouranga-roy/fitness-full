@@ -4,7 +4,7 @@
     padding: 18px 30px;
     position: relative;
     .checkout-login-form {
-        background-color: var(--color-white); 
+        background-color: var(--white-color); 
         max-height: 0;
         overflow: hidden;
         transition: padding 0ms;
@@ -21,28 +21,6 @@
         }
       
     }
-
-    // .checkout-login-form {
-    //     max-height: 0;
-    //     overflow: hidden;
-    //     transition: max-height 350ms ease-out;
-    //     .theme-input {
-    //         background-color: transparent; 
-    //         margin-bottom: 20px;
-    //         opacity: 0;
-    //     }
-    //     &.active {
-    //         max-height: 200px;
-    //         background-color: var(--color-white); 
-    //         padding: 24px;
-    //         margin-top: 24px;
-    //         .theme-input {
-    //             border: 1px solid var(--color-border);
-    //             opacity: 1;
-    //         }
-    //     }
-      
-    // }
 }
 
 .checkout-coupon-box {
@@ -58,7 +36,7 @@
         }
         &.active {
             max-height: 200px;
-            background-color: var(--color-white); 
+            background-color: var(--white-color); 
             margin-top: 24px;
         }
     }
@@ -194,7 +172,7 @@
                 width: 15px;
                 height: 15px;
                 border: 1px solid var(--color-border);
-                color: var(--color-white);
+                color: var(--white-color);
             }
         }
     }

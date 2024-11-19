@@ -16,7 +16,7 @@
         font-weight: 600;
         line-height: 73px;
         text-align: center;
-        color: var(--color-white);
+        color: var(--white-color);
         margin-bottom: 16px;
         text-transform: uppercase;
 
@@ -113,7 +113,7 @@
 
         &:hover {
             background: var(--secondary-color);
-            color: var(--color-white);
+            color: var(--white-color);
         }
     }
 }

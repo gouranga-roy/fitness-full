@@ -52,7 +52,7 @@
                         ~ span {
                             &::before {
                                 background-color: var(--primary-color);
-                                color: var(--color-white);
+                                color: var(--white-color);
                                 border-color: var(--primary-color);
                             }
                         }
@@ -128,7 +128,7 @@
                     &:checked {
                         ~ span {
                             &::before {
-                                color: var(--color-white);
+                                color: var(--white-color);
                             }
                         }
                     }
@@ -167,7 +167,7 @@
             height: 15px;
             border: 2px solid var(--secondary-color);
             border-radius: 0;
-            background-color: var(--color-white);
+            background-color: var(--white-color);
             padding: 0;
             outline: 0;
             &::before {
@@ -238,7 +238,7 @@
             font-weight: 400;
             color: var(--primary-color);
             &:hover {
-                color: var(--color-white); 
+                color: var(--white-color); 
                 background-color: var(--primary-color);
             }
         }

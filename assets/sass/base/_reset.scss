@@ -142,7 +142,7 @@ svg {
 
 // Color class 
 .gmWhiteColor {
-    color: var(--color-white);
+    color: var(--white-color);
 }
 .gmWprimaryColor {
     color: var(--parimary-color);
@@ -156,13 +156,13 @@ svg {
 
 // Build For Svg Icon 
 .gm_icon_white {
-    fill: var(--color-white);
+    fill: var(--white-color);
 
     &>svg {
-        fill: var(--color-white);
+        fill: var(--white-color);
 
         & path {
-            fill: var(--color-white);
+            fill: var(--white-color);
         }
     }
 }
@@ -253,7 +253,7 @@ svg {
     font-family: var(--body-font);
     background: var(--color-primary-button);
     transition: var(--transition-base);
-
+    transition-delay: 0.36s;
 
     & .gm_btn_text {
         position: relative;
@@ -274,6 +274,7 @@ svg {
             height: 24px;
             position: relative;
             top: -1px;
+            transition-delay: 0.36s;
         }
     }
 
@@ -533,7 +534,7 @@ svg {
             background: transparent;
             min-width: unset;
             padding: 6px;
-            color: var(--color-white);
+            color: var(--white-color);
 
             & span {
                 display: inline-block;

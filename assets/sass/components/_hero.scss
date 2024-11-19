@@ -55,7 +55,7 @@
         font-weight: 600;
         line-height: 115px;
         text-align: left;
-        color: var(--color-white);
+        color: var(--white-color);
         margin-bottom: 32px;
         text-transform: uppercase;
 
@@ -116,6 +116,8 @@
     border-radius: 50%;
     border: 8px solid var(--primary-bg-color);
     background: #FFC7A7;
+    position: relative;
+    animation: circleMove 4s linear infinite;
     @include displayFlex(flex, center, center, column);
     margin-left: -102px;
     z-index: 3;
@@ -128,6 +130,27 @@
 
     @include portrait-phone {
         border-color: rgba(3, 21, 32, .8);
+    }
+    img {
+        animation: circleImgMove 4s linear infinite;
+    }
+}
+@keyframes circleMove {
+    0% {
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(-10px);
+    } 100% {
+        transform: translateY(0);
+    }
+}
+@keyframes circleImgMove {
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.1);
+    } 100% {
+        transform: scale(1);
     }
 }
 

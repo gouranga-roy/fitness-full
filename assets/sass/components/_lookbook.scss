@@ -26,14 +26,14 @@
     }
 
     &:hover {
-        color: var(--color-white);
+        color: var(--white-color);
 
         & svg {
-            fill: var(--color-white);
+            fill: var(--white-color);
 
             & path {
-                fill: var(--color-white);
-                stroke: var(--color-white);
+                fill: var(--white-color);
+                stroke: var(--white-color);
             }
         }
     }
@@ -162,7 +162,7 @@
             font-weight: 600;
             line-height: 52px;
             text-transform: uppercase;
-            color: var(--color-white);
+            color: var(--white-color);
             margin-bottom: 24px;
 
             @include portrait-phone {
@@ -272,7 +272,7 @@
         padding: 16px 20px 15px;
         gap: 8px;
         background: var(--secondary-color);
-        color: var(--color-white);
+        color: var(--white-color);
 
         @include large-screen {
             padding: 14px 20px 13px;
@@ -299,7 +299,7 @@
         }
 
         &:hover {
-            color: var(--color-white);
+            color: var(--white-color);
         }
     }
 }
@@ -343,7 +343,7 @@
             font-size: 40px;
             font-weight: 600;
             line-height: 52px;
-            color: var(--color-white);
+            color: var(--white-color);
             text-transform: uppercase;
             margin-bottom: 31px;
 
@@ -402,7 +402,7 @@
 
         &:hover {
             & .gm_btn_text {
-                color: var(--color-white);
+                color: var(--white-color);
             }
         }
     }
@@ -521,7 +521,7 @@
             font-size: 40px;
             font-weight: 600;
             line-height: 52px;
-            color: var(--color-white);
+            color: var(--white-color);
             text-transform: uppercase;
             margin-bottom: 8px;
 
@@ -552,7 +552,7 @@
     }
 
     & .lookbookLink {
-        color: var(--color-white);
+        color: var(--white-color);
 
         &::after {
             position: absolute;
@@ -561,7 +561,7 @@
             bottom: 0;
             left: 0;
             height: 1px;
-            background: var(--color-white);
+            background: var(--white-color);
             transform: 0.3s all;
         }
 
@@ -610,7 +610,7 @@
             font-size: 40px;
             font-weight: 600;
             line-height: 52px;
-            color: var(--color-white);
+            color: var(--white-color);
             text-transform: uppercase;
             margin-bottom: 8px;
             @include displayFlex(flex, center, center, row);
@@ -684,7 +684,7 @@
             font-size: 40px;
             font-weight: 600;
             line-height: 52px;
-            color: var(--color-white);
+            color: var(--white-color);
             text-transform: uppercase;
             margin-bottom: 8px;
 
@@ -711,7 +711,7 @@
     }
 
     & .lookbookLink {
-        color: var(--color-white);
+        color: var(--white-color);
 
         &::after {
             position: absolute;
@@ -720,7 +720,7 @@
             bottom: 0;
             left: 0;
             height: 1px;
-            background: var(--color-white);
+            background: var(--white-color);
             transform: 0.3s all;
         }
 

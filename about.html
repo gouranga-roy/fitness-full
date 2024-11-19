@@ -18,7 +18,10 @@
 
     <!--Essential Js files-->
     
+    <script src="assets/js/jquery.min.js" defer="defer"></script>
+    <script src="assets/js/jquery-ui.js" defer="defer"></script>
     <script src="assets/js/bootstrap.min.js" defer="defer"></script>
+    <script src="assets/js/popper.min.js" defer="defer"></script>
     <script src="assets/js/swiper-bundle.min.js" defer="defer"></script>
     <script src="assets/js/shuffle.min.js" defer="defer"></script>
     <script src="assets/js/gsap.js" defer="defer"></script>
@@ -218,7 +221,7 @@
             <div class="row g-5 g-lg-4 align-items-center">
                 <div class="col-xl-5 col-lg-6">
                     <div class="image-wrapper">
-                        <img src="assets/images/about/1.jpg" alt="not found" class="img-fluid">
+                        <img src="assets/images/hero/hero3-image-1.jpg" alt="not found" class="img-fluid">
                     </div>
                 </div>
                 <div class="ps-xl-5 col-xl-5 col-lg-6">
@@ -227,7 +230,15 @@
                         <h2 class="display-3 fw-normal mb-5">About Uroan</h2>
                         <p class="mb-4 gmWprimaryColor">Mauris blandit aliquet elit eget tincidunt nibh pulvinar uisque velit nisi pretium ut lacinia in elementum id enim velit nisi pretium elementum id enim. </p>
                         <p class="mb-5 fw-light">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-                        <a href="contact.html" class="template-btn primary-btn text-uppercase"><span>Contact Us</span></a>
+                        <a href="contact.html" class="gm_primary-btn">
+                            <span class="gm_btnShape"></span>
+                            <span class="gm_btnShape"></span>
+                            <span class="gm_btnShape"></span>
+                            <span class="gm_btnShape"></span>
+                            <span class="gm_btn_text">
+                                Contact Us
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -235,11 +246,19 @@
     </section>
     <!--history section end-->
 
-    <!--video section start-->
-    <div class="video-box position-relative z-1 overflow-hidden" data-background="assets/images/about/video-bg.jpg">
-        <a href="https://www.youtube.com/watch?v=6WZOxnYi4Cs" data-fancybox class="template-video-btn"><i class="fas fa-play"></i></a>
-    </div>
-    <!--video sectin end-->
+    <!-- Video Popup Start -->
+    <section class="gm_video_popup_sec gmBgImage" style="background-image: url(assets/images/home1/video-bg.jpg);">
+        <div class="container-fluide p-0">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="gm_video_playBtnWrapp">
+                        <a href="https://youtu.be/NYswsA1YWME?si=_i51b3sujx-OvKrQ" class="gm_video_playBtn">Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Popup End -->
 
     <!-- mission area start-->
     <section class="ptb-120 bg-white overflow-hidden">
@@ -248,7 +267,7 @@
                 <div class="col-xl-4 col-lg-6">
                     <div class="theme-card">
                         <div class="overflow-hidden">
-                            <img src="assets/images/about/01.jpg" alt="not found" class="img-fluid">
+                            <img src="assets/images/about/ab-mission01.jpg" alt="not found" class="img-fluid">
                         </div>
                         <div class="mt-40">
                             <h3 class="mb-30">Our Mission</h3>
@@ -259,7 +278,7 @@
                 </div>
                 <div class="col-xl-4 d-none d-xl-block">
                     <div class="feature-image about-mission-box">
-                        <img src="assets/images/about/2.jpg" alt="not found" class="img-fluid">
+                        <img src="assets/images/about/mission-ab02.jpg" alt="not found" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6">
@@ -393,7 +412,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="gm-team-card">
                         <div class="position-relative overflow-hidden">
-                            <img src="assets/images/about/team-1.jpg" alt="team" class="img-fluid">
+                            <img src="assets/images/team/team-1.jpg" alt="team" class="img-fluid">
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -410,7 +429,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="gm-team-card">
                         <div class="position-relative overflow-hidden">
-                            <img src="assets/images/about/team-2.jpg" alt="team" class="img-fluid">
+                            <img src="assets/images/team/team-2.jpg" alt="team" class="img-fluid">
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -427,7 +446,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="gm-team-card">
                         <div class="position-relative overflow-hidden">
-                            <img src="assets/images/about/team-3.jpg" alt="team" class="img-fluid">
+                            <img src="assets/images/team/team-3.jpg" alt="team" class="img-fluid">
                             <div class="team-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -780,6 +799,15 @@
             <button type="submit" class="template-btn primary-btn"><span>Go</span></button>
         </form>
     </div>
+
+    <!-- Video Popup Section Start-->
+    <div id="video-popup" class="popup-overlay">
+        <div class="popup-content">
+          <span class="popup-close">&times;</span>
+          <iframe id="popup-video" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- Video Popup Section End-->
 </body>
 
 </html>

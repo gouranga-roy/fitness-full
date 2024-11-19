@@ -32,7 +32,7 @@
     overflow: hidden;
 
     & .gm_brand_item {
-        background: var(--color-white);
+        background: var(--white-color);
         position: relative;
         border: 1px solid var(--color-border);
         @include displayFlex(flex, center, center, column);

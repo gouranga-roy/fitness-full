@@ -53,7 +53,7 @@
         font-weight: 600;
         line-height: 24px;
         background: var(--secondary-color);
-        color: var(--color-white);
+        color: var(--white-color);
         padding: 2px 8px;
         text-transform: uppercase;
     }
@@ -77,16 +77,16 @@
 
         & i {
             font-size: 19px;
-            color: var(--color-white);
+            color: var(--white-color);
         }
 
         & svg {
-            fill: var(--color-white);
+            fill: var(--white-color);
 
             & path {
-                fill: var(--color-white);
+                fill: var(--white-color);
                 stroke-width: 0.2px;
-                stroke: var(--color-white);
+                stroke: var(--white-color);
             }
         }
 

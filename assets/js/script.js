@@ -860,3 +860,71 @@ function toggleAccordion() {
 }
 
 items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+/*******************************
+* Qty
+*******************************/
+document.querySelectorAll(".increment").forEach(button => {
+    button.addEventListener("click", function () {
+        const inputField = this.previousElementSibling;
+        let value = parseInt(inputField.value, 10) || 0;
+        value += 1;
+        inputField.value = value;
+        inputField.dispatchEvent(new Event('change'));
+    });
+});
+
+document.querySelectorAll(".drecrement").forEach(button => {
+    button.addEventListener("click", function () {
+        const inputField = this.nextElementSibling;
+        let value = parseInt(inputField.value, 10) || 0;
+        if (value > 1) {
+            value -= 1;
+        }
+        inputField.value = value;
+        inputField.dispatchEvent(new Event('change'));
+    });
+});
+
+/*******************************
+* Qty 02
+*******************************/
+document.querySelectorAll(".increment").forEach(button => {
+    button.addEventListener("click", function () {
+        const inputField = this.closest('.quantity').querySelector('.carqty');
+        let value = parseInt(inputField.value, 10) || 0;
+        value += 1;
+        inputField.value = value;
+        inputField.dispatchEvent(new Event('change'));
+    });
+});
+
+document.querySelectorAll(".drecrement").forEach(button => {
+    button.addEventListener("click", function () {
+        const inputField = this.closest('.quantity').querySelector('.carqty');
+        let value = parseInt(inputField.value, 10) || 0;
+        if (value > 1) {
+            value -= 1;
+        }
+        inputField.value = value;
+        inputField.dispatchEvent(new Event('change'));
+    });
+});
+
+
+
+(function($){
+
+    // Pricing Range Slider
+    $( ".ur-pricing-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $("#amount").val("$" + $(".ur-pricing-range").slider("values", 0) + " - $" + $(".ur-pricing-range").slider("values", 1));
+})(jQuery)
+

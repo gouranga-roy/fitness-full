@@ -52,7 +52,7 @@
         color: #8D8D8D
     }
     .explore-btn {
-        color: var(--color-white);
+        color: var(--white-color);
         position: relative;;
         &::before {
             content: '';
@@ -61,7 +61,7 @@
             bottom: -1px;
             width: calc(100% - 24px);
             height: 1px;
-            background-color: var(--color-white);
+            background-color: var(--white-color);
             transition: var(--transition-base);
         }
         &:hover {
@@ -105,10 +105,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-white);
+            color: var(--white-color);
             border-radius: 50%;
             &:hover {
-                background-color: var(--color-white);
+                background-color: var(--white-color);
                 color: var(--primary-color);
             }
         }
