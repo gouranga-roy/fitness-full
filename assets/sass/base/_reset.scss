@@ -267,7 +267,7 @@ svg {
         column-gap: 16px;
         z-index: 1;
         transition: var(--transition-base);
-
+        transition-delay: 0.36s;
         &>svg {
             padding: 4px;
             width: 24px;
