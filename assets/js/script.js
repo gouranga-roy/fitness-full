@@ -11,6 +11,15 @@
         }
     });
     $("#amount").val("$" + $(".ur-pricing-range").slider("values", 0) + " - $" + $(".ur-pricing-range").slider("values", 1));
+
+
+    // preloader js
+    // $(window).load(function() { // makes sure the whole site is loaded
+	// 	$('#preloader_spinner').fadeOut(); // will first fade out the loading animation
+	// 	$('#preloader').delay(150).fadeOut('slow'); // will fade out the white DIV that covers the website.
+	// 	$('body').delay(150).css({'overflow':'visible'})
+    // })
+    
 })(jQuery)
 
 /*==================================
@@ -924,4 +933,35 @@ document.querySelectorAll(".drecrement").forEach(button => {
         inputField.value = value;
         inputField.dispatchEvent(new Event('change'));
     });
+});
+
+/*******************************
+* Preloader
+*******************************/
+window.addEventListener('load', function() {
+    var preloaderSpinner = document.getElementById('preloader_spinner');
+    if (preloaderSpinner) {
+        preloaderSpinner.style.transition = 'opacity 0.4s';
+        preloaderSpinner.style.opacity = '0';
+
+        setTimeout(function() {
+            preloaderSpinner.style.display = 'none';
+        }, 400);
+    }
+
+    var preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(function() {
+            preloader.style.transition = 'opacity 0.4s';
+            preloader.style.opacity = '0';
+
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 400);
+        }, 150);
+    }
+
+    setTimeout(function() {
+        document.body.style.overflow = 'visible';
+    }, 150);
 });
