@@ -1,7 +1,7 @@
 (function($){
 
     // Pricing Range Slider
-    $( ".ur-pricing-range" ).slider({
+    $( ".gm-pricing-range" ).slider({
         range: true,
         min: 0,
         max: 500,
@@ -10,16 +10,8 @@
             $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
         }
     });
-    $("#amount").val("$" + $(".ur-pricing-range").slider("values", 0) + " - $" + $(".ur-pricing-range").slider("values", 1));
+    $("#amount").val("$" + $(".gm-pricing-range").slider("values", 0) + " - $" + $(".gm-pricing-range").slider("values", 1));
 
-
-    // preloader js
-    // $(window).load(function() { // makes sure the whole site is loaded
-	// 	$('#preloader_spinner').fadeOut(); // will first fade out the loading animation
-	// 	$('#preloader').delay(150).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	// 	$('body').delay(150).css({'overflow':'visible'})
-    // })
-    
 })(jQuery)
 
 /*==================================
