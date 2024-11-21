@@ -586,6 +586,7 @@ header .has-megamenu {
                 font-weight: 600;
                 margin-top: 8px;
                 color: var(--heading-color);
+                display: inline-block;
                 &:hover{
                     color: var(--secondary-color);
                 }

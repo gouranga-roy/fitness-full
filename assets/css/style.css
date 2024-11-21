@@ -1404,7 +1404,8 @@ header .has-megamenu {
       padding: 0;
       font-weight: 600;
       margin-top: 8px;
-      color: var(--heading-color); }
+      color: var(--heading-color);
+      display: inline-block; }
       .gm_megamenu .header-megamenu-banner .banner-text .single-button:hover {
         color: var(--secondary-color); }
 
