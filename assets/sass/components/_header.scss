@@ -835,6 +835,12 @@ header .has-megamenu {
         }
     }
 }
+.whiteLogoSticky {
+    display: none;
+    @include screen-992 {
+        display: block !important;
+    }
+}
 
 .gm_header_section02.sticky-on {
     background: var(--primary-bg-color);
@@ -861,6 +867,14 @@ header .has-megamenu {
             & .logo {
                 display: none !important;
             }
+
+            .whiteLogoSticky {
+                // display: none;
+                @include screen-992 {
+                    display: block !important;
+                }
+
+            }
         }
 
         & div.col-xl-9 {
@@ -873,8 +887,11 @@ header .has-megamenu {
         }
 
         & .gm_navmenu02 ul {
-            gap: 60px;
+            gap: 50px;
 
+            @include screen-1320 {
+                gap: 28px;
+            }
             @include large-screen {
                 gap: 28px;
             }
@@ -2246,12 +2263,12 @@ header .has-megamenu {
         .submit-btn {
             width: 55px;
             height: 53px;
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             color: var(--white-color);
             flex-shrink: 0;
             transition: var(--transition-base); 
             &:hover {
-                background-color: var(--secondary-color);
+                background-color: var(--primary-color);
             }
         }
     }
