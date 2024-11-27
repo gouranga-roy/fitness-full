@@ -381,16 +381,34 @@ header.gm_header_section {
 
                     li {
                         display: block;
-
+                        padding: 10px 24px;
                         a {
                             color: var(--primary-color);
                             padding: 10px 24px;
                             font-size: 16px;
+                            position: relative;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: auto;
+                                right: 0;
+                                bottom: 0;
+                                width: 0;
+                                height: 1px;
+                                background: var(--secondary-color);
+                                transition: all 350ms ease;
+                            }
+                            &:hover {
+                                &::after {
+                                    width: 100%;
+                                    left: 0;
+                                    right: auto;
+                                }
+                            }
                         }
 
-                        &:hover {
-                            &>a {
-                                padding-left: 30px;
+                        &>a {
+                            &:hover {
                                 color: var(--secondary-color);
                             }
                         }
@@ -1070,16 +1088,15 @@ header .has-megamenu {
 
                         a {
                             color: var(--white-color);
-                            padding: 10px 24px;
+                            padding: 0;
                             font-size: 16px;
+                            display: inline-block;
+                            // &:hover {
+                            //     color: var(--secondary-color);
+                            // }
                         }
 
-                        &:hover {
-                            &>a {
-                                padding-left: 30px;
-                                color: var(--secondary-color);
-                            }
-                        }
+                       
 
                         &.has-submenu {
                             &>.submenu-wrapper {
@@ -1128,15 +1145,15 @@ header .has-megamenu {
                 position: static;
             }
 
-            &:hover {
-                &>a {
-                    color: var(--secondary-color);
-                }
+            // &:hover {
+            //     &>a {
+            //         color: var(--secondary-color);
+            //     }
 
-                &::after {
-                    color: var(--secondary-color);
-                }
-            }
+            //     &::after {
+            //         color: var(--secondary-color);
+            //     }
+            // }
         }
     }
 }
@@ -1768,19 +1785,37 @@ header .has-megamenu {
 
                     li {
                         display: block;
-
+                        padding: 10px 24px;
                         a {
                             color: var(--white-color);
-                            padding: 10px 24px;
                             font-size: 16px;
-                        }
-
-                        &:hover {
-                            &>a {
-                                padding-left: 30px;
+                            padding: 0;
+                            position: relative;
+                            display:  inline-block;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: auto;
+                                right: 0;
+                                bottom: 0;
+                                width: 0;
+                                height: 1px;
+                                background: var(--secondary-color);
+                                transition: all 350ms ease;
+                            }
+                            &:hover {
+                                &::after {
+                                    width: 100%;
+                                    left: 0;
+                                    right: auto;
+                                }
+                            }
+                            &:hover {
                                 color: var(--secondary-color);
                             }
                         }
+
+                        
 
                         &.has-submenu {
                             &>.submenu-wrapper {

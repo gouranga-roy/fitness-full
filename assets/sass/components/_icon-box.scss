@@ -115,6 +115,10 @@
     background-color: var(--color-background);
     padding: 0;
     margin: 0;
+    @include screen-768 {
+        display: flex;
+        gap: 16px;
+    }
 
     &__content {
         position: relative;
@@ -167,6 +171,7 @@
 
     .gm_iconbox02__icon {
         text-align: left;
+        flex: 0 0 50px;
     }
 }
 

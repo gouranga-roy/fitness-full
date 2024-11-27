@@ -19,6 +19,9 @@
     margin-bottom: 16px;
     overflow: hidden;
     position: relative;
+    a {
+        display: inline-flex;
+    }
 
     & img {
         max-width: 100%;

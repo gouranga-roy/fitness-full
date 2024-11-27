@@ -40,23 +40,24 @@
         }
 
         &::before {
+            content: "";
             position: absolute;
-            content: "/";
-            left: 0;
-            top: -2px;
-            color: var(--secondary-color);
-            font-size: 16px;
-            opacity: 0;
+            right: 0;
+            left: auto;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--secondary-color);
             transition: 0.2s all;
         }
 
         &:hover {
             color: var(--secondary-color);
-            padding-left: 10px;
 
             &::before {
-                opacity: 1;
-                color: inherit;
+                width: 100%;
+                right: auto;
+                left: 0;
             }
         }
 
@@ -431,6 +432,7 @@
 
         & button[type="submit"] {
             color: var(--white-color);
+            background: var(--primary-bg-color);
             font-size: 18px;
             font-weight: 700;
             line-height: 25px;
@@ -448,9 +450,7 @@
             }
 
             &:hover {
-                & span {
-                    background: var(--primary-bg-color);
-                }
+                background: var(--secondary-color);
             }
         }
     }

@@ -111,7 +111,8 @@
         line-height: 24px;
         color: var(--text-color);
 
-        &:hover {
+        &:hover,
+        &.active {
             background: var(--secondary-color);
             color: var(--white-color);
         }

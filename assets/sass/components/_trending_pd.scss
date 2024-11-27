@@ -316,7 +316,9 @@
 // Items 03
 .gm_trendingItem_03 {
     position: relative;
-
+    a {
+        display: inline-flex;
+    }
     &__thumb {
         max-width: 100%;
         min-height: 340px;

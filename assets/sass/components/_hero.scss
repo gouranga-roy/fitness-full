@@ -296,6 +296,7 @@
     padding: 24px;
     box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.05);
     text-align: center;
+    display: inline-block;
 
     & h3 {
         font-size: 56px;
@@ -450,6 +451,7 @@
         box-shadow: var(--color-shadow);
         margin-left: 57px;
         cursor: pointer;
+        animation: bundle-product-toggler-pulse 3s infinite;
     }
 
     &.gm_nthChild2 {
@@ -479,6 +481,15 @@
         @include portrait-phone {
             margin-left: 40px;
         }
+    }
+}
+
+@keyframes bundle-product-toggler-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 88,36, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 2rem rgba(255, 88, 36, 0);
     }
 }
 

@@ -700,7 +700,6 @@ const categoryLinks = document.querySelectorAll('.gm_fitnessCat_wrap li a');
 
 categoryLinks.forEach(link => {
     const images = link.parentElement.querySelectorAll('img'); // Get all <img> tags inside the <li>
-
     link.addEventListener('mouseover', () => {
         images.forEach(img => img.classList.add('hovered')); // Add 'hovered' to all images
     });
@@ -709,7 +708,6 @@ categoryLinks.forEach(link => {
         images.forEach(img => img.classList.remove('hovered')); // Remove 'hovered' from all images
     });
 });
-
 
 /*==================================
 * Video Popup
@@ -956,5 +954,149 @@ window.addEventListener('load', function() {
     setTimeout(function() {
         document.body.style.overflow = 'visible';
     }, 150);
+
+    // =====================
+    // CART DRAWER SECTION START
+    
+    const cartDrawer = document.getElementById("cartDrawer");
+    const cartDrawerCloseButton = document.getElementById(
+      "cartDrawerCloseButton"
+    );
+    const cartDrawerOpenButton = document.getElementById(
+      "cartDrawerOpenButton"
+    );
+    const inputRange = document.getElementById("cart-drawer-deals-input-range");
+    const rangeSlide = document.getElementById("cart-drawer-deals-range");
+    const cardDrawerDeals = document.getElementById("cardDrawerDeals");
+
+    // Function to open the cart drawer
+    function openCartDrawer() {
+      cartDrawer.classList.add("active");
+      handleOverlay({ show: true, action: closeCartDrawer });
+
+      const tl = gsap.timeline();
+      tl.from(cartDrawer.querySelector(".cart-drawer-header"), {
+        y: 100,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power1.inOut",
+      })
+        .from(cartDrawer.querySelector(".cart-drawer-wrapper"), {
+          y: 100,
+          opacity: 0,
+          duration: 0.4,
+          ease: "power1.inOut",
+        })
+        .from(cartDrawer.querySelector(".cart-drawer-footer"), {
+          y: 100,
+          opacity: 0,
+          duration: 0.4,
+          ease: "power1.inOut",
+        });
+    }
+
+    // Function to close the cart drawer
+    function closeCartDrawer() {
+      cartDrawer.classList.remove("active");
+      handleOverlay({ show: false });
+    }
+
+    // Function to update range slide width
+    function updateRangeSlide() {
+      rangeSlide.style.width = `${inputRange.value}%`;
+    }
+
+    // Function to toggle card drawer deals
+    function toggleCardDrawerDeals() {
+      const dealsWrapper = cardDrawerDeals.querySelector(
+        ".cart-drawer-deals-rang-wrapper"
+      );
+
+      if (cardDrawerDeals.classList.contains("active")) {
+        gsap.to(dealsWrapper, {
+          height: 0,
+          duration: 0.4,
+          opacity: 1,
+          ease: "power1.inOut",
+          overflow: "hidden",
+        });
+        cardDrawerDeals.classList.remove("active");
+      } else {
+        cardDrawerDeals.classList.add("active");
+        gsap.to(dealsWrapper, {
+          height: "auto",
+          duration: 0.4,
+          opacity: 1,
+          ease: "power1.inOut",
+        });
+      }
+    }
+
+    // Initialize the cart drawer deals range
+    gsap.set(cardDrawerDeals.querySelector(".cart-drawer-deals-rang-wrapper"), {
+      height: 0,
+      opacity: 0,
+    });
+
+    if (cardDrawerDeals.classList.contains("active")) {
+      gsap.set(
+        cardDrawerDeals.querySelector(".cart-drawer-deals-rang-wrapper"),
+        {
+          height: "auto",
+          opacity: 1,
+        }
+      );
+    }
+
+    // Event Listeners
+    cartDrawerOpenButton.addEventListener("click", openCartDrawer);
+    cartDrawerCloseButton.addEventListener("click", closeCartDrawer);
+    inputRange.addEventListener("input", updateRangeSlide);
+    cardDrawerDeals.addEventListener("click", toggleCardDrawerDeals);
+
+    // CART DRAWER SUGGEST PRODUCTS SWIPER
+    const swiperCart = new Swiper(".cart-drawer-suggest-products-wrapper", {
+      loop: true,
+      speed: 700,
+      slidesPerView: 1,
+      pagination: {
+        el: ".cart-drawer-suggest-products-pagination",
+        clickable: true,
+      },
+    });
+
+
+    // Function to handle the overlay visibility
+    const handleOverlay = ({ show = false, action = () => {} }) => {
+    const overlay = document.querySelector(".overlay");
+
+    // HANDLE CLOSE OVERLAY
+    const handleClose = () => {
+      overlay.classList.remove("active");
+      overlay.style.zIndex = "var(--overlay-z-index)";
+      document.body.style.overflowY = "visible";
+      document.body.style.overflowX = "hidden";
+      action();
+    };
+
+    // HANDLE OPEN
+    const handleOpen = () => {
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    };
+
+    // CONDITION
+    if (show) {
+      handleOpen();
+    } else {
+      handleClose();
+    }
+
+    overlay.addEventListener("click", () => {
+      if (show) {
+        handleClose();
+      }
+    });
+  };
 
 });
