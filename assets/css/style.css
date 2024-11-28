@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Fitness & Gym - eCommerce HTML Template
 Author: WebritoTheme
@@ -9456,6 +9457,308 @@ header .has-megamenu {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0); }
+
+/* ========================
+ MOBILE MENU START
+ =------------------------------------*/
+.mobile-menu {
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  width: 360px;
+  max-width: 100%;
+  background: #f6f7f8;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  height: 100vh; }
+
+.header-mobile-menu {
+  background-color: #fff;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 0px 0 30px 30px; }
+
+.header-mobile-menu .close-button {
+  position: static; }
+
+.mobile-menu-wrapper {
+  margin-top: 48px;
+  padding: 0 20px;
+  position: relative; }
+
+.mobile-menu-wrapper-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 26px; }
+
+.mobile-menu-wrapper-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 18px;
+  font-weight: 700;
+  color: var(--color-heading);
+  font-size: 18px; }
+
+.mobile-menu-wrapper-list li a img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border: 1px solid var(--color-heading); }
+
+.mobile-menu-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 20px;
+  bottom: 0;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px 20px 0 0;
+  text-align: center; }
+  .mobile-menu-footer .footer-contact-text a {
+    color: var(--color-heading); }
+
+.mobile-menu-footer-button-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0; }
+  .mobile-menu-footer-button-wrapper .gm_primary-btn {
+    padding: 8px 20px;
+    text-align: center;
+    border-radius: 30px;
+    width: 100%; }
+    .mobile-menu-footer-button-wrapper .gm_primary-btn .gm_btn_text {
+      font-size: 16px;
+      font-weight: 600; }
+
+.mobile-footer-option-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.mobile-footer-option-wrapper .custom-select {
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-body);
+  padding: 10px 13px;
+  color: var(--color-heading);
+  border: 1px solid var(--color-border) !important;
+  border-radius: 40px;
+  font-weight: 600;
+  line-height: 150%;
+  height: 42px; }
+
+.mobile-footer-option-wrapper .custom-select::after {
+  top: 25%;
+  right: 16px; }
+
+.mobile-menu-footer-button-wrapper .mobile-menu-currency {
+  background: transparent; }
+
+.mobile-menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 26px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 20px; }
+
+.mobile-menu-social li {
+  --color-foreground: var(--color-heading);
+  color: var(--color-foreground); }
+
+.mobile-submenu {
+  width: 100%;
+  position: absolute;
+  background: #f6f7f8;
+  width: 100%;
+  display: none;
+  z-index: 250;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  top: -6px;
+  left: 0;
+  padding: 0 20px; }
+
+.mobile-submenu-back-button {
+  padding: 16px 20px;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px; }
+
+/* ========================
+ OPTION & SELECT SECTION START
+ =------------------------------------*/
+.custom-select {
+  position: relative;
+  width: 16rem; }
+
+.custom-select.open {
+  z-index: 999999999999999; }
+
+.custom-select::after {
+  color: var(--color-foreground);
+  content: "›";
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  position: absolute;
+  top: -0.6rem;
+  right: 0;
+  font-size: 28px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center; }
+
+.custom-select.open::after {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0.3rem center;
+  -ms-transform-origin: 0.3rem center;
+  transform-origin: 0.3rem center; }
+
+.custom-select .selected {
+  color: var(--color-foreground);
+  position: relative; }
+
+.custom-select .select-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; }
+
+.custom-select .select-options-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: .8rem;
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+  overflow: hidden;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+  visibility: hidden;
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom;
+  left: 0; }
+
+.custom-select.open .select-options-list {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  visibility: visible; }
+
+.select-options-list .option {
+  --color-heading: #020714;
+  color: var(--color-heading);
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; }
+
+.select-options-list .option:hover {
+  background-color: #ddd; }
 
 .video-box {
   width: 100%;
