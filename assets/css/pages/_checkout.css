@@ -1,0 +1,134 @@
+/*************** checkout page ***************/
+.returning-box {
+  padding: 18px 30px;
+  position: relative; }
+  .returning-box .checkout-login-form {
+    background-color: var(--white-color);
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: padding 0ms;
+    -o-transition: padding 0ms;
+    transition: padding 0ms;
+    -webkit-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    transition: all 350ms ease-out; }
+    .returning-box .checkout-login-form .theme-input {
+      background-color: transparent;
+      margin-bottom: 20px;
+      border: 1px solid var(--color-border); }
+    .returning-box .checkout-login-form.active {
+      max-height: 200px;
+      padding: 24px;
+      margin-top: 24px; }
+
+.checkout-coupon-box {
+  padding: 18px 30px;
+  border: 1px solid var(--color-border); }
+  .checkout-coupon-box .checkout-coupon-form {
+    max-width: 400px;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    transition: all 350ms ease-out; }
+    .checkout-coupon-box .checkout-coupon-form input {
+      margin-bottom: 20px; }
+    .checkout-coupon-box .checkout-coupon-form.active {
+      max-height: 200px;
+      background-color: var(--white-color);
+      margin-top: 24px; }
+
+.checkout-form .input-field label {
+  margin-bottom: 10px; }
+
+.checkout-form .input-field .nice-select {
+  height: 54px;
+  line-height: 54px; }
+  .checkout-form .input-field .nice-select.open .list {
+    width: 100%; }
+
+.checkout-form .theme-input {
+  border: 1px solid var(--color-border);
+  font-weight: 300; }
+
+.order-table {
+  width: 100%;
+  padding: 40px;
+  border: 1px solid var(--color-border); }
+  .order-table table {
+    width: 100%; }
+    .order-table table tr {
+      border-bottom: 1px solid var(--color-border); }
+    .order-table table th {
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 24px 0; }
+    .order-table table td {
+      padding: 24px 0;
+      vertical-align: middle; }
+      .order-table table td .product-box {
+        min-width: 340px; }
+      .order-table table td .pp-price {
+        min-width: 100px; }
+    .order-table table .feature-image {
+      width: 80px;
+      padding: 10px; }
+
+.checkout-payment-methods label {
+  display: block;
+  position: relative; }
+  .checkout-payment-methods label input {
+    opacity: 0; }
+    .checkout-payment-methods label input:checked ~ span::after {
+      opacity: 1; }
+  .checkout-payment-methods label span.radio {
+    position: relative;
+    padding-left: 15px; }
+    .checkout-payment-methods label span.radio::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 3px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--primary-color);
+      background-color: transparent;
+      border-radius: 50%; }
+    .checkout-payment-methods label span.radio::after {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      opacity: 0; }
+  .checkout-payment-methods label p {
+    margin-top: 4px; }
+  .checkout-payment-methods label + label {
+    margin-top: 12px; }
+  .checkout-payment-methods label input:checked ~ .description {
+    display: block; }
+  .checkout-payment-methods label input:checked ~ span.checkbox::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color); }
+  .checkout-payment-methods label .description {
+    display: none;
+    margin-top: 10px; }
+  .checkout-payment-methods label span.checkbox {
+    position: relative;
+    padding-left: 10px; }
+    .checkout-payment-methods label span.checkbox::before {
+      content: '\f00c';
+      font-family: 'FontAwesome';
+      font-size: 10px;
+      text-align: center;
+      line-height: 12px;
+      position: absolute;
+      left: -15px;
+      top: 3px;
+      width: 15px;
+      height: 15px;
+      border: 1px solid var(--color-border);
+      color: var(--white-color); }
