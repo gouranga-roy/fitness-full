@@ -244,11 +244,8 @@
     overflow: scroll;
     height: 100%;
     padding: 0 32px 220px;
-}
-
-@media screen and (min-width: 992px) {
-    .cart-drawer-wrapper {
-        padding: 0 30px 220px;
+    @include screen-992{
+        padding: 0 20px 220px;
     }
 }
 
@@ -357,7 +354,11 @@
 }
 
 .cart-drawer li+li {
-    margin-top: -2PX;
+    margin-top: -2PX;    
+    @include screen-768{
+        margin-top: 3px;
+        gap: 6px;
+    }
 }
 
 .cart-drawer-deals-rang-list li {
@@ -390,11 +391,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include screen-768{
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .cart-drawer-deals-rang-list li .icon svg {
     width: 18px;
     height: auto;
+    @include screen-768{
+        width: 14px;
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -412,6 +420,9 @@
 .cart-drawer-deals-rang-list li span {
     font-size: 14px;
     font-weight: 600;
+    @include screen-768{
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -438,11 +449,15 @@
     gap: 19px;
     margin-bottom: 30px;
     align-items: center;
+    @include screen-768{
+        margin-top: 30px;
+        grid-template-columns: 110px 1fr;
+    }
 }
 
 @media screen and (min-width: 576px) {
     .cart-drawer-item-list li {
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 110px 1fr;
     }
 }
 
@@ -461,7 +476,9 @@
 .cart-drawer-item-list li .item-title {
     font-weight: 500;
     font-size: 18px;
-
+    @include screen-768{
+        font-size: 16px;
+    }
     a {
         color: var(--primary-color);
     }
@@ -661,6 +678,9 @@
     z-index: 20;
     padding: 30px 30px 38px;
     border-radius: 60px 60px 0 0;
+    @include screen-768{
+        padding: 30px 20px 38px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -679,11 +699,17 @@
     align-items: center;
     justify-content: space-between;
     font-size: 24px;
+    @include screen-768{
+        font-size: 18px;
+    }
 }
 
 .cart-drawer-footer-heading p {
     font-size: 16px;
     color: var(--color-heading);
+    @include screen-768{
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -703,10 +729,17 @@
     padding: 16px 20px 8px;
     text-align: center;
     border-radius: 30px;
-
+    @include screen-768{
+        padding: 10px 10px 2px;
+    }
     .gm_btn_text {
         font-size: 16px;
         font-weight: 600;
+        @include screen-768{
+            font-size: 12px;
+            font-weight: 600;
+            gap: 6px;
+        }
     }
 }
 
@@ -794,12 +827,6 @@
 .product-quantity-controller input::placeholder {
     background: transparent;
     color: var(--color-heading);
-}
-
-@media screen and (max-width: 576px) {
-    .product-quantity-controller {
-        order: 2;
-    }
 }
 
 

@@ -484,6 +484,14 @@
     }
 }
 
+// @keyframes bundle-product-toggler-pulse {
+//     0% {
+//       box-shadow: 0 0 0 0px rgba(255, 88,36, 0.7);
+//     }
+//     100% {
+//       box-shadow: 0 0 0 2rem rgba(255, 88, 36, 0);
+//     }
+// }
 @keyframes bundle-product-toggler-pulse {
     0% {
       box-shadow: 0 0 0 0px rgba(255, 88,36, 0.7);
@@ -491,7 +499,7 @@
     100% {
       box-shadow: 0 0 0 2rem rgba(255, 88, 36, 0);
     }
-}
+  }
 
 .gm_hreoR_cnt_pdt {
     @include displayFlex(inline-flex, start, start, column);

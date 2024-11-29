@@ -5231,6 +5231,10 @@ header .has-megamenu {
     -ms-flex-direction: column;
     flex-direction: column;
     overflow: hidden; }
+    .gm_trendingItem_two .gm_trendingItem__thumb a {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
     .gm_trendingItem_two .gm_trendingItem__thumb img {
       max-width: 100%;
       width: auto;
@@ -8776,10 +8780,9 @@ header .has-megamenu {
   overflow: scroll;
   height: 100%;
   padding: 0 32px 220px; }
-
-@media screen and (min-width: 992px) {
-  .cart-drawer-wrapper {
-    padding: 0 30px 220px; } }
+  @media (max-width: 991.98px) {
+    .cart-drawer-wrapper {
+      padding: 0 20px 220px; } }
 
 .cart-drawer-suggest-products .rating-star {
   display: -webkit-box;
@@ -8888,6 +8891,10 @@ header .has-megamenu {
 
 .cart-drawer li + li {
   margin-top: -2PX; }
+  @media (max-width: 767.98px) {
+    .cart-drawer li + li {
+      margin-top: 3px;
+      gap: 6px; } }
 
 .cart-drawer-deals-rang-list li {
   display: -webkit-box;
@@ -8939,10 +8946,17 @@ header .has-megamenu {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-deals-rang-list li .icon {
+      width: 32px;
+      height: 32px; } }
 
 .cart-drawer-deals-rang-list li .icon svg {
   width: 18px;
   height: auto; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-deals-rang-list li .icon svg {
+      width: 14px; } }
 
 @media screen and (min-width: 576px) {
   .cart-drawer-deals-rang-list li .icon {
@@ -8955,6 +8969,9 @@ header .has-megamenu {
 .cart-drawer-deals-rang-list li span {
   font-size: 14px;
   font-weight: 600; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-deals-rang-list li span {
+      font-size: 12px; } }
 
 @media screen and (min-width: 576px) {
   .cart-drawer-deals-rang-list li span {
@@ -8979,11 +8996,16 @@ header .has-megamenu {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-item-list li {
+      margin-top: 30px;
+      -ms-grid-columns: 110px 1fr;
+      grid-template-columns: 110px 1fr; } }
 
 @media screen and (min-width: 576px) {
   .cart-drawer-item-list li {
-    -ms-grid-columns: 120px 1fr;
-    grid-template-columns: 120px 1fr; } }
+    -ms-grid-columns: 110px 1fr;
+    grid-template-columns: 110px 1fr; } }
 
 .cart-drawer-item-list li .image-wrapper img {
   border-radius: 12px; }
@@ -9005,6 +9027,9 @@ header .has-megamenu {
 .cart-drawer-item-list li .item-title {
   font-weight: 500;
   font-size: 18px; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-item-list li .item-title {
+      font-size: 16px; } }
   .cart-drawer-item-list li .item-title a {
     color: var(--primary-color); }
 
@@ -9226,6 +9251,9 @@ header .has-megamenu {
   z-index: 20;
   padding: 30px 30px 38px;
   border-radius: 60px 60px 0 0; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-footer {
+      padding: 30px 20px 38px; } }
 
 @media screen and (min-width: 768px) {
   .cart-drawer-footer {
@@ -9247,10 +9275,16 @@ header .has-megamenu {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: 24px; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-footer-heading h4 {
+      font-size: 18px; } }
 
 .cart-drawer-footer-heading p {
   font-size: 16px;
   color: var(--color-heading); }
+  @media (max-width: 767.98px) {
+    .cart-drawer-footer-heading p {
+      font-size: 14px; } }
 
 @media screen and (min-width: 768px) {
   .cart-drawer-footer-heading h4 {
@@ -9268,9 +9302,17 @@ header .has-megamenu {
   padding: 16px 20px 8px;
   text-align: center;
   border-radius: 30px; }
+  @media (max-width: 767.98px) {
+    .cart-drawer-footer-button-wrapper .gm_primary-btn {
+      padding: 10px 10px 2px; } }
   .cart-drawer-footer-button-wrapper .gm_primary-btn .gm_btn_text {
     font-size: 16px;
     font-weight: 600; }
+    @media (max-width: 767.98px) {
+      .cart-drawer-footer-button-wrapper .gm_primary-btn .gm_btn_text {
+        font-size: 12px;
+        font-weight: 600;
+        gap: 6px; } }
 
 /* ========================
  Products Card
@@ -9379,12 +9421,6 @@ header .has-megamenu {
 .product-quantity-controller input::placeholder {
   background: transparent;
   color: var(--color-heading); }
-
-@media screen and (max-width: 576px) {
-  .product-quantity-controller {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2; } }
 
 /* ========================
  POPUP SECTION BAR START
