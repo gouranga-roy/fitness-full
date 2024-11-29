@@ -1,6 +1,24 @@
-(function($){
+(function ($) {
+    /*
+        1. Pricing Range Slider
+        2. Sicky Headaer
+        3. Data Background Set
+        4. checkout toggle
+        5. Scroll to top Button
+        6. Scroll to top on button click
+        7. Strech Image 
+        8. Collection Slide
+        9. Testimonial
+        10. Header Search 
+        11. Preloader
+        12. Fancybox
+        13. Countdown
+        14. Cart Drawer
+        16. Count Down
+        17. Accordion Boxs
+    */
 
-    // Pricing Range Slider
+    // 1. Pricing Range Slider
     $( ".gm-pricing-range" ).slider({
         range: true,
         min: 0,
@@ -15,7 +33,7 @@
 })(jQuery)
 
 /*==================================
-* Sicky Headaer
+2. Sicky Headaer
 ==================================*/
 window.addEventListener("scroll", function () {
     const scrollBar = window.scrollY;
@@ -29,18 +47,17 @@ window.addEventListener("scroll", function () {
         }
     });
 });
-
+    
 /*==================================
-* Data Background Set
+3. Data Background Set
 ==================================*/
 document.querySelectorAll('[data-background]').forEach(function (element) {
     const backgroundUrl = element.getAttribute('data-background');
     element.style.backgroundImage = `url(${backgroundUrl})`;
 });
 
-    
 /*==================================
-* checkout toggle
+4. checkout toggle
 ==================================*/
 document.querySelectorAll(".checkout-toggle-form").forEach(function (form) {
     const toggleBtn = form.querySelector(".form-toggle-btn");
@@ -56,7 +73,7 @@ document.querySelectorAll(".checkout-toggle-form").forEach(function (form) {
 
 
 /*==================================
-* Scroll to top Button
+5. Scroll to top Button
 ==================================*/
 window.addEventListener("scroll", function () {
     const scrollBar = window.scrollY;
@@ -69,7 +86,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
-// Scroll to top on button click
+// 6. Scroll to top on button click
 document.querySelector(".scroll-top-btn").addEventListener("click", function () {
     window.scrollTo({
         top: 0,
@@ -78,7 +95,7 @@ document.querySelector(".scroll-top-btn").addEventListener("click", function () 
 });
 
 /*==================================
-* Strech Image 
+7. Strech Image 
 ==================================*/
 function gm_stretch() {
     var windowWidth = window.innerWidth;
@@ -136,7 +153,7 @@ window.addEventListener('resize', gm_stretch);
 
 
 /*==================================
-* Collection Slide
+8. Collection Slide
 ==================================*/
 var swiper = new Swiper(".gm_collections_slides", {
     slidesPerView: 1,
@@ -170,7 +187,7 @@ var swiper = new Swiper(".gm_collections_slides", {
 });
 
 /*==================================
-* Testimonial
+9. Testimonial
 ==================================*/
 var swiper = new Swiper('.gm_testimonial', {
     loop: true,
