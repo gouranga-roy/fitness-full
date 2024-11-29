@@ -1066,6 +1066,37 @@ window.addEventListener('load', function() {
 window.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
+    (function () {
+        const productControllers = document.querySelectorAll(
+          ".product-quantity-controller"
+        );
+    
+        productControllers &&
+          productControllers.forEach((controller) => {
+            let count = 1;
+            const decreaseButton = controller.querySelector(".decrease-quantity");
+            const increaseButton = controller.querySelector(".increase-quantity");
+            const productQuantity = controller.querySelector(".product-quantity");
+    
+            // Set the initial quantity
+            productQuantity.value = count;
+    
+            // Handle increase
+            increaseButton.addEventListener("click", () => {
+              count++;
+              productQuantity.value = count;
+            });
+    
+            // Handle decrease
+            decreaseButton.addEventListener("click", () => {
+              if (count > 1) {
+                count--;
+                productQuantity.value = count;
+              }
+            });
+          });
+    })();
+
     // Function to handle the overlay visibility
     const handleOverlay = ({ show = false, action = () => {} }) => {
       const overlay = document.querySelector(".overlay");
